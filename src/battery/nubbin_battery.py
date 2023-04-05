@@ -1,4 +1,5 @@
 from battery_interface import Battery
+from utils.add_years_to_date import add_years_to_date
 
 class NubbinBattery(Battery):
     """
@@ -21,4 +22,5 @@ class NubbinBattery(Battery):
         """
         Nubbin Battery needs to be replaced every 4 years
         """
-        return self.current_date - self.last_service_date > (4 * 365)
+        next_service_date = add_years_to_date(self.current_date, 4)
+        return next_service_date < self.current_date

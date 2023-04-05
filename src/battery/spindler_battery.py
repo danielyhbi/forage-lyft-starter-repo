@@ -1,4 +1,5 @@
 from battery_interface import Battery
+from utils.add_years_to_date import add_years_to_date
 
 class SpindlerBattery(Battery):
     """
@@ -21,4 +22,5 @@ class SpindlerBattery(Battery):
         """
         Battery needs to be replaced every 2 years
         """
-        return self.current_date - self.last_service_date > (2 * 365)
+        next_service_date = add_years_to_date(self.current_date, 2)
+        return next_service_date < self.current_date

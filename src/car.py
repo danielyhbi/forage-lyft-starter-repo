@@ -14,4 +14,4 @@ class Car(Serviceable):
         """
         Determines if a car needs service by checking both engine and battery
         """
-        return self.engine.needs_service or self.battery.needs_service
+        return self.engine.needs_service() or self.battery.needs_service()
