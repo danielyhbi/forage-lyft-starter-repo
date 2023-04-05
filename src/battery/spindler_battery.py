@@ -23,5 +23,5 @@ class SpindlerBattery(Battery):
         """
         Battery needs to be replaced every 2 years
         """
-        next_service_date = add_years_to_date(self.last_service_date, 2)
+        next_service_date = add_years_to_date(self.last_service_date, 3)
         return next_service_date < self.current_date
