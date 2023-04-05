@@ -1,7 +1,6 @@
-from abc import ABC
-from engine_interface import Engine
+from src.engine.engine_interface import Engine
 
-class WilloughbyEngine(Engine, ABC):
+class WilloughbyEngine(Engine):
     """
     Class for a WilloughbyEngine Engine (concrete)
     """

@@ -1,6 +1,6 @@
-from engine.engine_interface import Engine
-from battery.battery_interface import Battery
-from utils.serviceable import Serviceable
+from src.engine.engine_interface import Engine
+from src.battery.battery_interface import Battery
+from src.utils.serviceable import Serviceable
 
 
 class Car(Serviceable):

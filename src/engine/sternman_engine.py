@@ -1,7 +1,7 @@
-from abc import ABC
-from engine_interface import Engine
 
-class SternmanEngine(Engine, ABC):
+from src.engine.engine_interface import Engine
+
+class SternmanEngine(Engine):
     """
     Class for a SternmanEngine Engine (concrete)
     """
